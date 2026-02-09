@@ -1,7 +1,6 @@
 class GgStack < Formula
   desc "Stacked-diffs CLI tool (gg) for GitHub and GitLab"
   homepage "https://github.com/mrmans0n/git-gud"
-  version "0.1.14"
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/mrmans0n/git-gud/releases/download/v0.1.14/gg-stack-aarch64-apple-darwin.tar.xz"
