@@ -1,5 +1,5 @@
 class GgStack < Formula
-  desc "A stacked-diffs CLI tool (gg) for GitHub and GitLab"
+  desc "Stacked-diffs CLI tool (gg) for GitHub and GitLab"
   homepage "https://github.com/mrmans0n/git-gud"
   version "0.1.14"
   if OS.mac?
