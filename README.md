@@ -1,4 +1,4 @@
-# Mrmans0n Tap
+# mrmans0n Tap
 
 ## How do I install these formulae?
 
