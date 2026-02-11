@@ -1,25 +1,25 @@
 class GgStack < Formula
   desc "A stacked-diffs CLI tool (gg) for GitHub and GitLab"
   homepage "https://github.com/mrmans0n/git-gud"
-  version "0.1.15"
+  version "0.1.16"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.1.15/gg-stack-aarch64-apple-darwin.tar.xz"
-      sha256 "7590a71a43d819746628727bed90bdbb8f655eb7a8b8abbd33752604d8678599"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.1.16/gg-stack-aarch64-apple-darwin.tar.xz"
+      sha256 "8a3fe634d597f7cd3f3892d03e30bdd248e9a872b4596e19d7e2ceef89481f2a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.1.15/gg-stack-x86_64-apple-darwin.tar.xz"
-      sha256 "8d5480ece895272740874dc5840206fa3287952e7cf882cb2ee68b18ac2209ca"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.1.16/gg-stack-x86_64-apple-darwin.tar.xz"
+      sha256 "15c9e57f5fa4bd2da8a04ac9adedf7fb67c30525b9b0bc6cf4deddfbce6f1aa6"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.1.15/gg-stack-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "ffa4fa5a73d7eb1f6c223feded78a47918749a8f9292c31f3ae72404ad595790"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.1.16/gg-stack-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "81e00caebf302b5b24ec497a609064fffa8c1f8372ad20ae5a4373d80d2e1d16"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.1.15/gg-stack-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "ed1a38a95838d8f380c74fe8ef6005a7d601a57ae02923ac19ace4871676d910"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.1.16/gg-stack-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "977a547185cf083b7ae194b7f7a5e49d989670a47479da4ef60b12f8e1512be2"
     end
   end
   license "MIT"
