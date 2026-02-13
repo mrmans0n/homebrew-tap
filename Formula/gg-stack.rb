@@ -1,5 +1,5 @@
 class GgStack < Formula
-  desc "stacked-diffs CLI tool (gg) for GitHub and GitLab"
+  desc "Stacked-diffs CLI tool (gg) for GitHub and GitLab"
   homepage "https://github.com/mrmans0n/git-gud"
   if OS.mac?
     if Hardware::CPU.arm?
