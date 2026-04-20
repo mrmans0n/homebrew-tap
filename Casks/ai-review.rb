@@ -1,6 +1,6 @@
 cask "ai-review" do
-  version "0.3.12"
-  sha256 "e62144488ae63c9a89a8aa26414f98affbafb26e681f1dfc3e264536728b242f"
+  version "0.3.13"
+  sha256 "724dff6b386b3d830ac20069fd796e0e052e74a6c74175371453e8ad67ab7c71"
 
   url "https://github.com/mrmans0n/ai-review/releases/download/v#{version}/AI.Review_#{version}_aarch64.dmg"
   name "AI Review"
