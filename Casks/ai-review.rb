@@ -7,6 +7,7 @@ cask "ai-review" do
   desc "Desktop code review tool for AI-generated diffs"
   homepage "https://github.com/mrmans0n/ai-review"
 
+  depends_on :macos
   depends_on arch: :arm64
 
   app "AI Review.app"
