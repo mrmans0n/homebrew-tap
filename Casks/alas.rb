@@ -1,6 +1,6 @@
 cask "alas" do
-  version "0.3.2"
-  sha256 "ffb776180353b9aabe131b2786506ed2b7449ae6c76078f2dffb0cf81981b9af"
+  version "0.3.3"
+  sha256 "8d2e8fd10c38cc1ba86072c1ed71617269db3140790eb0604abaf14870ee767b"
 
   url "https://github.com/mrmans0n/alas/releases/download/v#{version}/Alas-#{version}-arm64.dmg"
   name "Alas"
