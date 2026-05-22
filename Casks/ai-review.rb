@@ -8,6 +8,7 @@ cask "ai-review" do
   homepage "https://github.com/mrmans0n/ai-review"
 
   depends_on arch: :arm64
+  depends_on macos: :sonoma
 
   app "AI Review.app"
   binary "#{appdir}/AI Review.app/Contents/Resources/bin/core-launcher", target: "air"
