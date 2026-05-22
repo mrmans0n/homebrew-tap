@@ -1,13 +1,12 @@
 cask "ai-review" do
-  version "0.5.3"
-  sha256 "9bebc92a04e86ab4b8f4296e8f0a0e8cba6d82a047384597bdbbe9714a2f4194"
+  version "0.5.4"
+  sha256 "de2b39d0a89c6ec4c68f9588d0734b0a55b01e62add1d3de47b8e4fd83774ba4"
 
   url "https://github.com/mrmans0n/ai-review/releases/download/v#{version}/AI.Review-#{version}-arm64.dmg"
   name "AI Review"
   desc "Desktop code review tool for AI-generated diffs"
   homepage "https://github.com/mrmans0n/ai-review"
 
-  depends_on :macos
   depends_on arch: :arm64
 
   app "AI Review.app"
