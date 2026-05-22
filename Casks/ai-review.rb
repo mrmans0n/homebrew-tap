@@ -10,7 +10,7 @@ cask "ai-review" do
   depends_on arch: :arm64
 
   app "AI Review.app"
-  binary "#{appdir}/AI Review.app/Contents/MacOS/AI Review", target: "air"
+  binary "#{appdir}/AI Review.app/Contents/Resources/bin/core-launcher", target: "air"
 
   postflight do
     system_command "/usr/bin/xattr",
