@@ -17,6 +17,8 @@ jobs:
       checks: read
       contents: read
       pull-requests: read
+    env:
+      HOMEBREW_NO_REQUIRE_TAP_TRUST: "1"
     steps:
       - name: Install Linux sandbox dependency
         if: runner.os == 'Linux'
