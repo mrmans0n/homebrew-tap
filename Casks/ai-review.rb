@@ -8,6 +8,7 @@ cask "ai-review" do
   homepage "https://github.com/mrmans0n/ai-review"
 
   depends_on arch: :arm64
+  depends_on :macos
 
   app "AI Review.app"
   binary "#{appdir}/AI Review.app/Contents/MacOS/AI Review", target: "air"
