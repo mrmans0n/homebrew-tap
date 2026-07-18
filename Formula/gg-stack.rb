@@ -3,22 +3,22 @@ class GgStack < Formula
   homepage "https://github.com/mrmans0n/git-gud"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.9.8/gg-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "b0016e6aa7f97e387dd503feaa8bec841ecad7ca0dd56862d56b8e01fbd52f51"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.9.9/gg-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "36c27456fb2d23860aea2ef683a7f897184255ee72c30d242d9661a6ed05a6a4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.9.8/gg-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "f46cf990fa489665f6d91667123256eb1b940ac20b2156ff2c8ee46da7cd54ce"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.9.9/gg-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "8895d3e8b7975f26405d927ba42dffe6bdb22b9d88878dbfee5d586b1c6194fa"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.9.8/gg-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "6596a47dcf2fbbe32bde165c0192c26193e04edf612bdda35b723c5333f9997f"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.9.9/gg-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "66a5b7eaeb472bd0fddb41b0fa2b238979800eeb4d0e02227a4df8bafd8ec97f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.9.8/gg-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "608aa1698947a45da27e1f024ee89b9fc7befcc42c9dac2a3ddff872b229e7bf"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.9.9/gg-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "87599aaef99e42fd7ffaca02c8b6bfd7f3decc133195cf31b21f8026d77a0755"
     end
   end
   license "MIT"
