@@ -3,22 +3,22 @@ class GgStack < Formula
   homepage "https://github.com/mrmans0n/git-gud"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.0/gg-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "d3a82680190b52476e165086ce15e01259e9faba22e5fc925f7d8af959c8797f"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.1/gg-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "005755baa8616a2fa2197651ff561c27a3bf976ba2053a7891c5f886325c3476"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.0/gg-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "da1f29917f9704a48703147a589af5bf824464f819c1c1f72cff61d11ccdae28"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.1/gg-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "09a9996a91b9edb8a70465b4329919ba7c120577e860b3888a2d2c52c4db8401"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.0/gg-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "3dc3d52c1d766a4526ea915d350f4d6203112a290455cba4d8d2cd85c854501f"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.1/gg-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "3de513209586863932da44dd9d1cb5552d385ee4a429c53920ef276a088fa136"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.0/gg-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "5d13460db9e088224bf0bbda6e02d3f18719b902557a30a3c6bf9e6ef58e9451"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.1/gg-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "ff79ddf85749fda9991232e76bef002a7ec017ca1bd43e176c514a7579c1e06c"
     end
   end
   license "MIT"
@@ -46,10 +46,18 @@ class GgStack < Formula
   end
 
   def install
-    bin.install "gg" if OS.mac? && Hardware::CPU.arm?
-    bin.install "gg" if OS.mac? && Hardware::CPU.intel?
-    bin.install "gg" if OS.linux? && Hardware::CPU.arm?
-    bin.install "gg" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "gg"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "gg"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "gg"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "gg"
+    end
 
     install_binary_aliases!
 
