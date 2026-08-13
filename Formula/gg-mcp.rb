@@ -3,22 +3,22 @@ class GgMcp < Formula
   homepage "https://mrmans0n.github.io/git-gud/"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.0/gg-mcp-aarch64-apple-darwin.tar.xz"
-      sha256 "852f8158335c6846240e2bba22a4dd12d9388ca91efc61ae33b1a176cee3b9d8"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.1/gg-mcp-aarch64-apple-darwin.tar.xz"
+      sha256 "62598b0f8f04125e29410b89fe757d4b59ef5f7ae3aaaaff29938cad22ddba05"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.0/gg-mcp-x86_64-apple-darwin.tar.xz"
-      sha256 "cb73b1f81863331885aafb921d90992fb6efc1b7b5d9028b30ee549eddb83b07"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.1/gg-mcp-x86_64-apple-darwin.tar.xz"
+      sha256 "e785b4923407788a70cca64be3a801c4249360e606e41013c1a01e74b67474dd"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.0/gg-mcp-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "919ca1fb85fcf3e45bfd804c8700de435debcd815f5195758da0d072a153cdb6"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.1/gg-mcp-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "24dd94da2533cbca4c04957c72e4115ffa51f763fa3d8e47c5f4ca0c8241c460"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.0/gg-mcp-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "0f31fcddaeee7ca9bc4124aba1f607fec6b6708203491aeb7b871107793a1b50"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.1/gg-mcp-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "9aa41e0e1b00eb0da020054e298378e3525339adc45ac64142882f7ddb7790ac"
     end
   end
   license "MIT"
@@ -46,10 +46,18 @@ class GgMcp < Formula
   end
 
   def install
-    bin.install "gg-mcp" if OS.mac? && Hardware::CPU.arm?
-    bin.install "gg-mcp" if OS.mac? && Hardware::CPU.intel?
-    bin.install "gg-mcp" if OS.linux? && Hardware::CPU.arm?
-    bin.install "gg-mcp" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "gg-mcp"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "gg-mcp"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "gg-mcp"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "gg-mcp"
+    end
 
     install_binary_aliases!
 
