@@ -43,7 +43,16 @@ jobs:
 
       - run: brew test-bot --only-setup
 
-      - run: brew test-bot --only-tap-syntax
+      - name: Check tap syntax
+        if: matrix.os != 'macos-15-intel'
+        run: brew test-bot --only-tap-syntax
+
+      - name: Verify Alas Intel cask
+        if: matrix.os == 'macos-15-intel'
+        run: |
+          brew audit --cask mrmans0n/tap/alas
+          brew fetch --cask mrmans0n/tap/alas --force --verbose
+
       - run: brew test-bot --only-formulae
         if: github.event_name == 'pull_request'
 
