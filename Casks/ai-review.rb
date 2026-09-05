@@ -13,7 +13,7 @@ cask "ai-review" do
   app "AI Review.app"
   binary "#{appdir}/AI Review.app/Contents/MacOS/AI Review", target: "air"
 
-  postflight do
+  postflight_steps do
     system_command "/usr/bin/xattr",
                    args: ["-cr", "#{appdir}/AI Review.app"],
                    sudo: false
