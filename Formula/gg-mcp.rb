@@ -3,22 +3,22 @@ class GgMcp < Formula
   homepage "https://mrmans0n.github.io/git-gud/"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.2/gg-mcp-aarch64-apple-darwin.tar.xz"
-      sha256 "34ade8b9b7e484a13f42685a99b3e6480c30eb402fa68a9f4fd307c76ca2ec39"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.3/gg-mcp-aarch64-apple-darwin.tar.xz"
+      sha256 "6e93e3bda30616894fb84bc710a4bf382e1e316d3bea5ecf8c62c5db9c740c2d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.2/gg-mcp-x86_64-apple-darwin.tar.xz"
-      sha256 "59f7d0c1447e63772bc46e8aa5c306c771cb2bb1625b2460432f3b9b6748800a"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.3/gg-mcp-x86_64-apple-darwin.tar.xz"
+      sha256 "7735f4cd063321baf75bc11ca88ad3c6f2f0a6cf446e8092a119741bbfb40514"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.2/gg-mcp-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "933c310cd7e9d82c0e7122f84619a604ae9edf9066a932b9da21952831a259d5"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.3/gg-mcp-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "bd6388fc3720b5a7f48226c87c6b2f727fad684ae4ed7cea1583b1c41499fe7d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.2/gg-mcp-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "3986d9ad12152db32947566705645bbc520a9394449c957771911a1ff29c2a4c"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.3/gg-mcp-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "6ddca546cb03226abaa2ac7e4442c401123f94aab10d557066e63a83057639f6"
     end
   end
   license "MIT"
