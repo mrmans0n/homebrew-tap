@@ -61,4 +61,12 @@ class Zjctl < Formula
     # sample files.
     pkgshare.install(*leftover_contents) unless leftover_contents.empty?
   end
+
+  test do
+    output = shell_output("#{bin}/zjctl --help")
+    assert_match "JSON-first CLI wrapper around zellij for AI agents", output
+    assert_match "sessions", output
+    assert_match "tabs", output
+    assert_match "panes", output
+  end
 end
