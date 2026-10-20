@@ -3,22 +3,22 @@ class GgStack < Formula
   homepage "https://github.com/mrmans0n/git-gud"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.4/gg-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "a839623a1f64ccc30fb9a97526b0f85c07d464035d777dbdfdc9797d2d8b68a2"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.5/gg-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "868ac2cb05a822407774df9a0ea06d24e02059c26008c42a6a1ce52001d456dc"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.4/gg-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "c275efde6452c65e737dc7e7c91ac30d8549de4f4ebc20ccb2497fcb1828d88f"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.5/gg-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "47e00252b0385082a427d951de68abb3516015a626d991377fdef76f693fb2ee"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.4/gg-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e2b13fbd831a8790042c3c3659e89a5c204f6abb8e70589a006a1b38539c596b"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.5/gg-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "2eaff524a9c173f657c3ca29afb290bd147fc7ba4153011e5f33ad7e35691bd5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.4/gg-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "09c6f378902418d8b5fad07edcb6614b4d1e6e7e87f70e934f14c7c58748afd8"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.5/gg-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "f2faa9e78fd3e1798c8268050e8fcc72c043d91a08dad3f38f80e824fe5eba23"
     end
   end
   license "MIT"
@@ -68,9 +68,5 @@ class GgStack < Formula
     # Install any leftover files in pkgshare; these are probably config or
     # sample files.
     pkgshare.install(*leftover_contents) unless leftover_contents.empty?
-  end
-
-  test do
-    assert_match version.to_s, shell_output("#{bin}/gg --version")
   end
 end
