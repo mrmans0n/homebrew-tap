@@ -1,13 +1,13 @@
 cask "alas" do
-  version "0.21.8"
+  version "0.21.9"
 
   on_arm do
-    sha256 "df815004aa8693863f8d652995bcd5924d8efff2a3e6536264140d0f0b063b32"
+    sha256 "472c9815b6440ea866ca1db610beb1bd564a122da80bbdf26d5d1b1c16c6d8f8"
 
     url "https://github.com/mrmans0n/alas/releases/download/v#{version}/Alas-#{version}-arm64.dmg"
   end
   on_intel do
-    sha256 "9c7de39659a9caf52c44614b3588807f9c980f609cb8c94862a985296a091077"
+    sha256 "550569eb74b61123a2eb9909708a979b1655b459dfcae62fd36eca749476f064"
 
     url "https://github.com/mrmans0n/alas/releases/download/v#{version}/Alas-#{version}-x86_64.dmg"
   end
@@ -16,16 +16,25 @@ cask "alas" do
   desc "AI parallel agent orchestrator"
   homepage "https://github.com/mrmans0n/alas"
 
+  conflicts_with cask: "alas-host"
   depends_on macos: :sonoma
 
   app "Alas.app"
+  binary "#{appdir}/Alas.app/Contents/Resources/alas-host/alas-host"
 
-  zap trash: [
-    "~/Library/Application Support/Alas",
-    "~/Library/Caches/io.nlopez.alas",
-    "~/Library/HTTPStorages/io.nlopez.alas",
-    "~/Library/Preferences/io.nlopez.alas.plist",
-    "~/Library/Saved Application State/io.nlopez.alas.savedState",
-    "~/Library/WebKit/io.nlopez.alas",
-  ]
+  # The launchd agents `alas-host install-agent` installs, one per profile.
+  # Not on uninstall, which an upgrade runs too: an agent survives upgrades,
+  # and stops by itself once the app is gone (it runs while its executable
+  # exists). The everyday profile's label is named as is: Homebrew's
+  # wildcard matches only agents running at the time.
+  zap launchctl: ["io.nlopez.alas.host", "io.nlopez.alas.host.*"],
+      trash:     [
+        "~/Library/Application Support/Alas",
+        "~/Library/Caches/io.nlopez.alas",
+        "~/Library/HTTPStorages/io.nlopez.alas",
+        "~/Library/LaunchAgents/io.nlopez.alas.host*.plist",
+        "~/Library/Preferences/io.nlopez.alas.plist",
+        "~/Library/Saved Application State/io.nlopez.alas.savedState",
+        "~/Library/WebKit/io.nlopez.alas",
+      ]
 end
