@@ -1,13 +1,13 @@
 cask "alas-host" do
-  version "0.22.1"
+  version "0.22.2"
 
   on_arm do
-    sha256 "5270315c7342100dc40879c3b1576f4d041220d9f939d024e5ee00159e42313b"
+    sha256 "e6e2c702425c6d49d616a6fa72b38dd9da8f8d18468dcc640c923b1f1ab62270"
 
     url "https://github.com/mrmans0n/alas/releases/download/v#{version}/alas-host-#{version}-arm64.zip"
   end
   on_intel do
-    sha256 "805aafd111c71f971c01d3377516737750f0dfb49a96727308a2c4e4cf2bfe56"
+    sha256 "fef36c8b0e09201e62128d8ebadc7636f9d82526fde04eacfc5a8b36cf842559"
 
     url "https://github.com/mrmans0n/alas/releases/download/v#{version}/alas-host-#{version}-x86_64.zip"
   end
