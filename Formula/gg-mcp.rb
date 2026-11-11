@@ -69,4 +69,13 @@ class GgMcp < Formula
     # sample files.
     pkgshare.install(*leftover_contents) unless leftover_contents.empty?
   end
+
+  test do
+    request = <<~JSON
+      {"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-03-26","capabilities":{},"clientInfo":{"name":"homebrew-test","version":"1.0"}}}
+    JSON
+    output = pipe_output(bin/"gg-mcp", request, 0)
+    assert_match '"id":1', output
+    assert_match '"capabilities":{"tools":{}}', output
+  end
 end
