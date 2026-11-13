@@ -1,13 +1,13 @@
 cask "alas" do
-  version "0.23.6"
+  version "0.23.7"
 
   on_arm do
-    sha256 "512745382a4ffc540133ebbcaa70c616dd21ab9d68e3ceaad28c7d6cd34787c6"
+    sha256 "7e4dca12a472ca1902eb804ce213435638f30611d0d3b02cec2fcc7f729be1c7"
 
     url "https://github.com/mrmans0n/alas/releases/download/v#{version}/Alas-#{version}-arm64.dmg"
   end
   on_intel do
-    sha256 "18808700136c2fa7986d23da3d60cdd5fe6ba028c461b6a5aa62b50f4e57ce92"
+    sha256 "d82150f469eec7eff05c45496f79406263e8af5ea0e8ffa0433b153314d8ff98"
 
     url "https://github.com/mrmans0n/alas/releases/download/v#{version}/Alas-#{version}-x86_64.dmg"
   end
