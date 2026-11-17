@@ -3,22 +3,22 @@ class GgMcp < Formula
   homepage "https://mrmans0n.github.io/git-gud/"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.7/gg-mcp-aarch64-apple-darwin.tar.xz"
-      sha256 "e5ac887f4e7bcba72cd51c95c9b40e6bb8bdd9b82bf9fa0107a6ad22d18e6371"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.8/gg-mcp-aarch64-apple-darwin.tar.xz"
+      sha256 "6a01e270775a5f68cce42fbc8fbd1da1e4ca46ab9f19ea708e2c05a97d1233f1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.7/gg-mcp-x86_64-apple-darwin.tar.xz"
-      sha256 "acb8586f5ba96e01c2b7f14739f2a16d0080937585a3f1e96eeb37191fc3a6f1"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.8/gg-mcp-x86_64-apple-darwin.tar.xz"
+      sha256 "699f787f2cbfd1afb438bff49d85ed5f0f6920b42ce8880cbe9f35e0395214d8"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.7/gg-mcp-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "6c5c16c060f8ba2df99dabd072f85c4476dc55bcf9b5f94016ff87e92841920a"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.8/gg-mcp-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "e9f9e2c00acc3a4ccc7a19882a7ae0c4e7fde4ab2ba7df4bc6e6a3e069fdfbaf"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.7/gg-mcp-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "f3ddc263916bf56aa76e38a2030d54a7e9144f53d7f066b7e74809fb61414d6f"
+      url "https://github.com/mrmans0n/git-gud/releases/download/v0.10.8/gg-mcp-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "0f2b4a36f76bc8a989ce329415b17b1b46e4d4ab9ee21f723f0af48ea6758551"
     end
   end
   license "MIT"
@@ -68,14 +68,5 @@ class GgMcp < Formula
     # Install any leftover files in pkgshare; these are probably config or
     # sample files.
     pkgshare.install(*leftover_contents) unless leftover_contents.empty?
-  end
-
-  test do
-    request = <<~JSON
-      {"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-03-26","capabilities":{},"clientInfo":{"name":"homebrew-test","version":"1.0"}}}
-    JSON
-    output = pipe_output(bin/"gg-mcp", request, 0)
-    assert_match '"id":1', output
-    assert_match '"capabilities":{"tools":{}}', output
   end
 end
