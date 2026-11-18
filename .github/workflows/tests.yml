@@ -30,6 +30,12 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Prepare Intel Homebrew prefix
+        if: matrix.os == 'macos-15-intel'
+        run: |
+          sudo mkdir -p /usr/local/libexec
+          sudo chown "$(id -un):$(id -gn)" /usr/local/libexec
+
       - name: Cache Homebrew Bundler RubyGems
         uses: actions/cache@v4
         with:
